@@ -8,13 +8,13 @@
 
 import SwiftUI
 
-struct MenuSection: Codable {
+struct MenuSection: Codable, Identifiable { // The identifiable protocol helps swift identify which item in our struct we are talking about
     var id: UUID
     var name: String
     var items: [MenuItem]
 }
 
-struct MenuItem: Codable, Equatable {
+struct MenuItem: Codable, Equatable, Identifiable {
     var id: UUID
     var name: String
     var photoCredit: String
