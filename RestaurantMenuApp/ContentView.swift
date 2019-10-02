@@ -19,7 +19,7 @@ struct ContentView: View { // This is the only screen in our app
             ForEach(restaurantMenu) { sectionInMenu in // This creates a list of all our sections in our restaurant menu
                 Section(header:Text(sectionInMenu.name)){ // This makes our section text
                     ForEach(sectionInMenu.items) { itemInSection in // This creates the various items in our sections
-                        Text(itemInSection.name)
+                        ItemCellView(menuItem: itemInSection)
                 }
 
                 }
